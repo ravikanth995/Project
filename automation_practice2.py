@@ -133,5 +133,27 @@ time.sleep(2)
 
 iphone = driver.find_element(By.XPATH, "//a[text() = 'iPhone']")
 iphone.click()
-time.sleep(3)
 
+driver.execute_script("window.scrollBy(0, 200)")
+valued3 = driver.execute_script("return window.pageYOffset;")
+print(f"The Number of pixels scrolled is {valued3} ")
+
+driver.back()
+driver.refresh()
+print("Done Back and Refreshing...................")
+
+# iphone_quantity = driver.find_element(By.NAME, 'quantity')
+# iphone_quantity.send_keys("4")
+# time.sleep(1)
+
+# button_cart = driver.find_element(By.ID, "button-cart")
+# button_cart.click()
+# time.sleep(1)
+
+driver.execute_script("window.scrollBy(0, 300)")
+driver.execute_script("return window.pageYOffset;")
+time.sleep(2)
+
+link_text = driver.find_element(By.LINK_TEXT, "My Account")
+link_text.click()
+time.sleep(3)
