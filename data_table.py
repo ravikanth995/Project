@@ -43,6 +43,7 @@ for r in range(2, No_of_rows+1):
         print(data)
     print()
 
+"""This is Web Table By Selenium"""
 
 
 
